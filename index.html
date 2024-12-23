@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Membership Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('bgform.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            font-size: 50px;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-bottom: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 50px;
+            margin-left: 50px;
+            border-width: 50px;
+        }
+
+        label {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], select {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        button[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+           
+}
+
+button[type="reset"]:hover {
+    background-color: #45a049;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Welcome to FlexLab</h1>
+
+       
+        <form action="process.php" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="membership_type">Membership Type:</label>
+            <select id="membership_type" name="membership_type" required>
+                <option value="Basic">Basic</option>
+                <option value="Premium">Premium</option>
+                <option value="VIP">VIP</option>
+            </select>
+
+            <label for="gym_location">Preferred Gym Location:</label>
+            <select id="gym_location" name="gym_location" required>
+                <option value="Downtown">Downtown</option>
+                <option value="Uptown">Uptown</option>
+                <option value="Suburbs">Suburbs</option>
+            </select>
+
+            <input type="submit" value="Register">
+            <br>
+            <button type="reset"> Clear form</button>
+        </form>
+    </div>
+
+
+</body>
+</html>
